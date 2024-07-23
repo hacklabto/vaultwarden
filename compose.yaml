@@ -1,0 +1,11 @@
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    restart: always
+    environment:
+      DOMAIN: "https://passwords.hacklab.to"
+    volumes:
+      - ./vw-data:/data
+    ports:
+      - 9080:80
